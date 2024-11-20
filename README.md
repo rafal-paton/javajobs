@@ -94,7 +94,7 @@ The application is deployed on **Amazon Web Services (AWS)** using:
 
 ---
 
-This project demonstrates my ability to design, implement, and deploy a robust web application using modern tools and best practices.  
+This project demonstrates my ability to design, implement, and deploy a robust web application using modern tools and best practices.
 Feel free to explore the codebase and contact me with any questions or feedback!
 
 ---
