@@ -26,7 +26,6 @@
 		<tag/>
 		<url/>
 	</scm>
-
 	<properties>
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -35,8 +34,8 @@
 		<testcontainers.version>1.17.4</testcontainers.version>
 		<assertj-core.version>3.19.0</assertj-core.version>
 		<wiremock-jre8.version>2.35.0</wiremock-jre8.version>
+		<awaitility.version>4.2.0</awaitility.version>
 	</properties>
-
 	<!--  SPRING BOOT -->
 	<dependencies>
 		<dependency>
@@ -90,6 +89,13 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
+		</dependency>
+		<!--  AWAITILITY -->
+		<dependency>
+			<groupId>org.awaitility</groupId>
+			<artifactId>awaitility</artifactId>
+			<version>${awaitility.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>

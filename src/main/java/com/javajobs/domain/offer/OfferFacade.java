@@ -3,6 +3,9 @@ package com.javajobs.domain.offer;
 import com.javajobs.domain.offer.dto.OfferRequestDto;
 import com.javajobs.domain.offer.dto.OfferResponseDto;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
