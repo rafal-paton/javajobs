@@ -36,6 +36,7 @@
 		<wiremock-jre8.version>2.35.0</wiremock-jre8.version>
 		<awaitility.version>4.2.0</awaitility.version>
 		<springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+		<swagger.version>2.0.2</swagger.version>
 	</properties>
 	<!--  SPRING BOOT -->
 	<dependencies>
@@ -98,11 +99,16 @@
 			<version>${awaitility.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!--  SWAGGER http://localhost:8080/swagger-ui/index.html#/ -->
+<!--		  SWAGGER http://localhost:8080/swagger-ui/index.html#/ -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
-			<artifactId>springfox-boot-starter</artifactId>
-			<version>${springfox-boot-starter.version}</version>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
