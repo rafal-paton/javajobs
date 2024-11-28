@@ -2,9 +2,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://admin:admin@localhost:27017/offers
-  mvc:
-    pathmatch:
-      matching-strategy: ANT_PATH_MATCHER
+
+
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ANT_PATH_MATCHER
 
 
 offer:
@@ -21,8 +23,15 @@ http:
   offers:
     scheduler:
       request:
-        delay: PT1S
+        delay: PT5S
 
 
 scheduling:
   enabled: true
+
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
