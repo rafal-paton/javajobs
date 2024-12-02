@@ -1,7 +1,6 @@
 package com.javajobs.domain.offer;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,11 +13,7 @@ class OfferService {
     List<Offer> fetchAllOffersAndSaveAllIfNotExists() {
         List<Offer> jobOffers = fetchOffers();
         final List<Offer> offers = filterNotExistingOffers(jobOffers);
-        try {
-            return offerRepository.saveAll(offers);
-        } catch (OfferDuplicateException duplicateKeyException) {
-            throw new OfferSavingException(duplicateKeyException.getMessage(), jobOffers);
-        }
+        return offerRepository.saveAll(offers);
     }
 
     private List<Offer> filterNotExistingOffers(List<Offer> jobOffers) {

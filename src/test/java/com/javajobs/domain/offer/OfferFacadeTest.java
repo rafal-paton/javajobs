@@ -5,6 +5,7 @@ import com.javajobs.domain.offer.dto.OfferRequestDto;
 import com.javajobs.domain.offer.dto.OfferResponseDto;
 import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.Test;
+import org.springframework.dao.DuplicateKeyException;
 
 import java.util.List;
 
@@ -108,7 +109,7 @@ public class OfferFacadeTest {
                 new OfferRequestDto("someName", "somePosition", "someSalary", "url.pl")));
         // then
         AssertionsForClassTypes.assertThat(thrown)
-                .isInstanceOf(OfferDuplicateException.class)
+                .isInstanceOf(DuplicateKeyException.class)
                 .hasMessage("Offer with offerUrl [url.pl] already exists");
     }
 }
