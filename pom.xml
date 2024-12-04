@@ -37,6 +37,7 @@
 		<awaitility.version>4.2.0</awaitility.version>
 		<springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
 		<swagger.version>2.0.2</swagger.version>
+		<java-jwt.version>4.0.0</java-jwt.version>
 	</properties>
 	<!--  SPRING BOOT -->
 	<dependencies>
@@ -56,6 +57,15 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<!--UNIT TESTS-->
 		<dependency>
@@ -113,6 +123,18 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+		<!-- JWT -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>${java-jwt.version}</version>
+		</dependency>
+		<!-- CONFIGURATION_PROPERTIES -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	<build>
