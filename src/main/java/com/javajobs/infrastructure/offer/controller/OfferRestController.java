@@ -3,6 +3,7 @@ package com.javajobs.infrastructure.offer.controller;
 import com.javajobs.domain.offer.OfferFacade;
 import com.javajobs.domain.offer.dto.OfferRequestDto;
 import com.javajobs.domain.offer.dto.OfferResponseDto;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -25,6 +26,7 @@ class OfferRestController {
 
     private final OfferFacade offerFacade;
 
+    @SecurityRequirement(name = "bearerAuth")
     @GetMapping
     public ResponseEntity<List<OfferResponseDto>> findALlOffers() {
         List<OfferResponseDto> allOffers = offerFacade.findAllOffers();
@@ -32,12 +34,13 @@ class OfferRestController {
         return ResponseEntity.ok(allOffers);
     }
 
+    @SecurityRequirement(name = "bearerAuth")
     @GetMapping("/{id}")
     public ResponseEntity<OfferResponseDto> findOfferById(@PathVariable String id) {
         OfferResponseDto offerById = offerFacade.findOfferById(id);
         return ResponseEntity.ok(offerById);
     }
-
+    @SecurityRequirement(name = "bearerAuth")
     @PostMapping
     public ResponseEntity<OfferResponseDto> saveOffer(@RequestBody @Valid OfferRequestDto offerDto) {
         OfferResponseDto offerResponseDto = offerFacade.saveOffer(offerDto);
