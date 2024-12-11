@@ -5,6 +5,9 @@ The application aggregates job listings periodically and lets users to browse, a
 
 ---
 
+## Live Demo
+http://ec2-18-195-50-193.eu-central-1.compute.amazonaws.com:8000/swagger-ui/index.html#
+
 ## Key Features
 
 ### User Functionalities
