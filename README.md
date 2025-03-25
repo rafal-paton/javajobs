@@ -69,7 +69,6 @@ Application provides the following endpoints:
 The application is deployed on **Amazon Web Services (AWS)** using:
 - **EC2**: Hosting the application.
 - **ECR**: Container storage.
-- **NGINX**: Reverse proxy for better performance and security.
 
 ---
 
